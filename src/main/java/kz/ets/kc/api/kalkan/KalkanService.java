@@ -44,7 +44,7 @@ public class KalkanService {
         log.debug("Kalkan provider name \"" + providerName + "\"");
     }
 
-    public Boolean verifyCMSSignature(CMSDataVerifyRequest req) throws Exception {
+    public void verifyCMSSignature(CMSDataVerifyRequest req) throws Exception {
         CMSUtil cmsUtil = new CMSUtil();
         try {
             cmsUtil.verifyCMS(Base64.decode(req.getSignedPlainData().getBytes()), Base64.decode(req.getPlainData().getBytes()), provider);
@@ -58,7 +58,6 @@ public class KalkanService {
                     new Date(),
                     true));
             log.debug("CMS signed data is verified.");
-            return true;
         } catch (ProviderUtilException e) {
             var msg = "Ошибка проверки подписанных CMS данных";
             log.error(msg, e);

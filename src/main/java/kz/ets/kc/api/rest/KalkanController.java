@@ -23,21 +23,17 @@ public class KalkanController {
     @PostMapping("/cms/verify")
     public ResponseEntity verify(@RequestBody CMSDataVerifyRequest req) {
         try {
-            var res = kalkanService.verifyCMSSignature(req);
-            return res ? new ResponseEntity(new CMSDataVerifyResponse(
+            kalkanService.verifyCMSSignature(req);
+            return new ResponseEntity(new CMSDataVerifyResponse(
                     1,
                     "Подпись корректна",
-                    "SIGN OK"), HttpStatus.OK) :
-                    new ResponseEntity(new CMSDataVerifyResponse(
-                            0,
-                            "Подпись не корректна",
-                            "BAD SIGN"), HttpStatus.OK);
+                    "SIGN OK"), HttpStatus.OK);
         } catch (Exception e) {
-            log.error("ERROR: ", e);
+            log.error("ERROR, request: " + req.toString(), e);
             return new ResponseEntity(new CMSDataVerifyResponse(
                     0,
                     e.getMessage(),
-                    "BAD SIGN"), HttpStatus.INTERNAL_SERVER_ERROR);
+                    "BAD SIGN"), HttpStatus.BAD_REQUEST);
         }
     }
 
