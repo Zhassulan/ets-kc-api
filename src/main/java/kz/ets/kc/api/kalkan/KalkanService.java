@@ -51,7 +51,7 @@ public class KalkanService {
         var brokerCode = req.getLogin();
         CMSUtil cmsUtil = new CMSUtil();
         try {
-            cmsUtil.verifyCMS(req.getSignedPlainData().getBytes(), req.getPlainData().getBytes(), provider);
+            cmsUtil.verifyCMS(Base64.decode(req.getSignedPlainData().getBytes()), Base64.decode(req.getPlainData().getBytes()), provider);
             log.debug("CMS signed data is verified.");
             return true;
         } catch (ProviderUtilException e) {
