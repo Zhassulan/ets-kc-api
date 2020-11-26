@@ -42,7 +42,7 @@
 
     <!-- App -->
     <!-- Use info, error methods only -->
-    <logger name="kz.ets.kc.api" level="info" additivity="false">
+    <logger name="kz.ets.kc.api" level="debug" additivity="false">
         <appender-ref ref="RollingFile"/>
         <appender-ref ref="Console"/>
     </logger>
