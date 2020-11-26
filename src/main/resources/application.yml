@@ -7,5 +7,7 @@ spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     password: WZcjCH6f
-    url: localhost:3306
+    url: jdbc:mysql://localhost:3306/db_kc?useSSL=false&serverTimezone=UTC
     username: kc
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
