@@ -1,12 +1,11 @@
 package kz.ets.kc.api.rest.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
-import java.util.Date;
-
 @Data
-public class CMSDataVerifyResult {
+@AllArgsConstructor
+public class CMSDataVerifyResponse {
 
     private int code;
     private String message;

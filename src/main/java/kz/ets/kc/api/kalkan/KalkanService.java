@@ -26,7 +26,6 @@ public class KalkanService {
 
     private String providerName;
     private Provider provider;
-    private String brokerCode;
 
     public Provider getProvider() {
         return provider;
@@ -49,10 +48,10 @@ public class KalkanService {
     }
 
     public Boolean verifyCMSSignature(CMSDataVerifyRequest req) throws Exception {
-        brokerCode = req.getLogin();
+        var brokerCode = req.getLogin();
         CMSUtil cmsUtil = new CMSUtil();
         try {
-            cmsUtil.verifyCMS(Base64.decode(req.getSignedPlainData().getBytes()), Base64.decode(req.getPlainData().getBytes()), provider);
+            cmsUtil.verifyCMS(req.getSignedPlainData().getBytes(), req.getPlainData().getBytes(), provider);
             log.debug("CMS signed data is verified.");
             return true;
         } catch (ProviderUtilException e) {
