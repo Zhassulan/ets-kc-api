@@ -1,0 +1,11 @@
+proxy:
+  host: proxy.tele2.kz
+  port: 9090
+spring:
+  application:
+    name: ets-api
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    password: WZcjCH6f
+    url: localhost:3306
+    username: kc
