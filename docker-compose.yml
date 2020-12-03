@@ -7,7 +7,7 @@ services:
     volumes:
       - "/var/log/app:/var/log/app"
     ports:
-      - "8080:8080"
+      - "8082:8080"
     container_name: api-v1-ets
     environment:
-      - SPRING_PROFILES_ACTIVE=test
+      - SPRING_PROFILES_ACTIVE=prod
