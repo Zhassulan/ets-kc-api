@@ -2,5 +2,5 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     password: WZcjCH6f
-    url: jdbc:mysql://localhost:3306/db_kc?useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/db_kc?useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
     username: kc
