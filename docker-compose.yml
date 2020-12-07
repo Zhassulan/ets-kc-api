@@ -3,11 +3,17 @@ services:
   service-api:
     restart: always
     image:  zhasst/api-v1-ets:latest
-    network_mode: bridge
+    #network_mode: bridge
     volumes:
-      - "/var/log/app:/var/log/app"
+      - "./log:/var/log/app"
     ports:
       - "8082:8080"
     environment:
       - "SPRING_PROFILES_ACTIVE=prod"
     container_name: container-api
+    networks:
+      - kc-net
+networks:
+  kc-net:
+    external:
+      name: kc-net
