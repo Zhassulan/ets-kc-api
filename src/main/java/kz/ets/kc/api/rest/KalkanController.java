@@ -24,6 +24,7 @@ public class KalkanController {
     public ResponseEntity verify(@RequestBody CMSDataVerifyRequest req) {
         try {
             kalkanService.verifyCMSSignature(req);
+            kalkanService.saveMsg(req);
             return new ResponseEntity(new CMSDataVerifyResponse(
                     1,
                     "Подпись корректна",

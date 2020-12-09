@@ -1,6 +1,6 @@
-package kz.ets.kc.api.data;
+package kz.ets.kc.api.msg;
 
-import kz.ets.kc.api.data.model.Msg;
+import kz.ets.kc.api.msg.model.Msg;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

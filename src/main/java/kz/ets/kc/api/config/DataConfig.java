@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
-@EnableJpaRepositories(basePackages = {"kz.ets.kc.api.data"})
+@EnableJpaRepositories(basePackages = {"kz.ets.kc.api.msg"})
 @EnableTransactionManagement
 public class DataConfig {
 }
