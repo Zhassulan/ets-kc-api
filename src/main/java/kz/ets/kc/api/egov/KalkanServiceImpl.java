@@ -31,12 +31,6 @@ public class KalkanServiceImpl implements KalkanService {
 
     private String providerName;
     private Provider provider;
-    private DataService dataServiceImpl;
-
-    @Autowired
-    public void setDataServiceImpl(DataService dataServiceImpl) {
-        this.dataServiceImpl = dataServiceImpl;
-    }
 
     @Bean
     public KalkanService kalkanService() {

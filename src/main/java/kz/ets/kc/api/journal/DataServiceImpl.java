@@ -15,8 +15,13 @@ import java.util.Optional;
 @Service
 public class DataServiceImpl implements DataService {
 
-    @Autowired MsgRepo repo;
+    MsgRepo repo;
     private KalkanService kalkanService;
+
+    @Autowired
+    public void setRepo(MsgRepo repo) {
+        this.repo = repo;
+    }
 
     @Autowired
     public void setKalkanService(KalkanService kalkanService) {

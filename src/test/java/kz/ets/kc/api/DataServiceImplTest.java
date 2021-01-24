@@ -1,10 +1,11 @@
 package kz.ets.kc.api;
 
-import kz.ets.kc.api.journal.DataServiceImpl;
+import kz.ets.kc.api.journal.MsgRepo;
 import kz.ets.kc.api.journal.model.Msg;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -20,7 +21,7 @@ import static org.junit.Assert.assertTrue;
 public class DataServiceImplTest {
 
     @Autowired
-    private DataServiceImpl service;
+    public MsgRepo repo;
 
     @Test
     public void save() {
@@ -32,7 +33,7 @@ public class DataServiceImplTest {
                 new Date(),
                 new Date(),
                 true);
-        service.save(msg);
-        assertTrue(service.findById(msg.getId()).isPresent());
+        repo.save(msg);
+        assertTrue(repo.findById(msg.getId()).isPresent());
     }
 }
