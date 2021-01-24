@@ -1,8 +1,8 @@
-package kz.ets.kc.api.rest;
+package kz.ets.kc.api.controller;
 
-import kz.ets.kc.api.kalkan.KalkanService;
-import kz.ets.kc.api.rest.model.CMSDataVerifyRequest;
-import kz.ets.kc.api.rest.model.CMSDataVerifyResponse;
+import kz.ets.kc.api.egov.KalkanService;
+import kz.ets.kc.api.controller.model.CMSDataVerifyRequest;
+import kz.ets.kc.api.controller.model.CMSDataVerifyResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

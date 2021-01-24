@@ -1,7 +1,7 @@
 package kz.ets.kc.api;
 
-import kz.ets.kc.api.kalkan.KalkanService;
-import kz.ets.kc.api.rest.model.CMSDataVerifyRequest;
+import kz.ets.kc.api.egov.KalkanService;
+import kz.ets.kc.api.controller.model.CMSDataVerifyRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;

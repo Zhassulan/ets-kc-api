@@ -1,4 +1,4 @@
-package kz.ets.kc.api.msg.model;
+package kz.ets.kc.api.journal.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

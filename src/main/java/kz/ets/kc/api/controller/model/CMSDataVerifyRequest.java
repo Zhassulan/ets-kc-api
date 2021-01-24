@@ -1,9 +1,6 @@
-package kz.ets.kc.api.rest.model;
+package kz.ets.kc.api.controller.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
-
-import java.util.Date;
 
 @Data
 public class CMSDataVerifyRequest {

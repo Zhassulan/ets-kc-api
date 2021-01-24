@@ -1,8 +1,8 @@
-package kz.ets.kc.api.kalkan;
+package kz.ets.kc.api.egov;
 
-import kz.ets.kc.api.msg.MsgService;
-import kz.ets.kc.api.msg.model.Msg;
-import kz.ets.kc.api.rest.model.CMSDataVerifyRequest;
+import kz.ets.kc.api.journal.MsgService;
+import kz.ets.kc.api.journal.model.Msg;
+import kz.ets.kc.api.controller.model.CMSDataVerifyRequest;
 import kz.gov.pki.kalkan.jce.provider.KalkanProvider;
 import kz.gov.pki.kalkan.jce.provider.cms.*;
 import kz.gov.pki.kalkan.util.encoders.Base64;

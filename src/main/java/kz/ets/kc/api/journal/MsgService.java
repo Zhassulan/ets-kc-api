@@ -1,11 +1,9 @@
-package kz.ets.kc.api.msg;
+package kz.ets.kc.api.journal;
 
-import kz.ets.kc.api.msg.model.Msg;
-import kz.gov.pki.kalkan.jce.provider.cms.SignerInformationStore;
+import kz.ets.kc.api.journal.model.Msg;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.security.cert.CertStore;
 import java.util.Optional;
 
 @Service

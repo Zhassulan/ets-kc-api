@@ -1,7 +1,7 @@
 package kz.ets.kc.api;
 
-import kz.ets.kc.api.msg.MsgService;
-import kz.ets.kc.api.msg.model.Msg;
+import kz.ets.kc.api.journal.MsgService;
+import kz.ets.kc.api.journal.model.Msg;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
