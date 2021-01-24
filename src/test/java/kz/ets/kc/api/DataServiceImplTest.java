@@ -1,6 +1,6 @@
 package kz.ets.kc.api;
 
-import kz.ets.kc.api.journal.MsgService;
+import kz.ets.kc.api.journal.DataServiceImpl;
 import kz.ets.kc.api.journal.model.Msg;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -17,10 +17,10 @@ import static org.junit.Assert.assertTrue;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @ActiveProfiles("dev")
-public class MsgServiceTest {
+public class DataServiceImplTest {
 
     @Autowired
-    private MsgService service;
+    private DataServiceImpl service;
 
     @Test
     public void save() {

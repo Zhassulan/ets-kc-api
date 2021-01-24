@@ -1,4 +1,4 @@
-package kz.ets.kc.api.egov;
+package kz.ets.kc.api.egov.enums;
 
 public enum TypeOfRespondent {
 
